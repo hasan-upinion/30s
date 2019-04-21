@@ -8,7 +8,7 @@ import Colors from '../constants/Colors'
 
 function StatusScreen(props) {
   const [
-    { teams, playingTeamIndex, canStart },
+    { teams, playingTeamIndex, canStart, winningScoreLimit },
     { generateQuestions, setPlayingTeamIndex },
   ] = React.useContext(Context)
 
@@ -48,6 +48,15 @@ function StatusScreen(props) {
               <DataTable.Cell numeric>{team.points}</DataTable.Cell>
             </DataTable.Row>
           ))}
+          <DataTable.Row
+            style={{
+              backgroundColor: '#333',
+              color: 'white'
+            }}
+          >
+            <DataTable.Cell><Text style={{color: 'white'}}>حد الفوز</Text></DataTable.Cell>
+            <DataTable.Cell numeric><Text style={{color: 'white'}}>{winningScoreLimit}</Text></DataTable.Cell>
+          </DataTable.Row>
         </DataTable>
         <View
           style={{

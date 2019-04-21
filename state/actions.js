@@ -52,6 +52,10 @@ const setQuestionLimit = (state, limit) => {
   state.questionLimit = limit
 }
 
+const setWinningScoreLimit = (state, limit) => {
+  state.winningScoreLimit = limit
+}
+
 const setTime = (state, time) => {
   state.time = time
 }
@@ -78,6 +82,7 @@ export default {
   setPlayingTeamIndex,
   setStarted,
   setQuestionsStatus,
+  setWinningScoreLimit,
   setQuestionLimit,
   setTime,
   reset,

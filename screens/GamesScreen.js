@@ -18,6 +18,7 @@ function GamesScreen(props) {
       questions,
       questionsStatus,
       questionLimit,
+      winningScoreLimit,
       time,
       teams,
       playingTeamIndex,
@@ -66,7 +67,7 @@ function GamesScreen(props) {
     setStartTimer(false)
     setPlayed(true)
   }
-  const winner = teams.find(team => team.points >= 5)
+  const winner = teams.find(team => team.points >= winningScoreLimit)
   if (winner) {
     // setStarted(false)
     return (
